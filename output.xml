@@ -1,53 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-27T12:32:13.176396" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-27T16:21:37.317783" rpa="false" schemaversion="5">
 <suite id="s1" name="Teste" source="C:\PROJETOS_PHYTON\teste.robot">
 <test id="s1-t1" name="Pesquisar Tutorial de Robot Framework" line="5">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-27T12:32:15.421232" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com.br'.</msg>
+<msg time="2024-12-27T16:21:39.848978" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com.br'.</msg>
 <arg>https://www.google.com.br</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-27T12:32:15.416892" elapsed="13.978564"/>
+<status status="PASS" start="2024-12-27T16:21:39.848109" elapsed="13.398965"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-27T12:32:29.396998" elapsed="0.497977"/>
+<status status="PASS" start="2024-12-27T16:21:53.263712" elapsed="0.419028"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-27T12:32:29.897157" level="INFO">Typing text 'tutorial de Robot Framework' into text field 'name:q'.</msg>
-<arg>name:q</arg>
+<msg time="2024-12-27T16:21:53.696547" level="INFO">Typing text 'tutorial de Robot Framework' into text field 'name=q'.</msg>
+<arg>name=q</arg>
 <arg>tutorial de Robot Framework</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-27T12:32:29.896071" elapsed="0.769266"/>
+<status status="PASS" start="2024-12-27T16:21:53.695434" elapsed="0.868736"/>
 </kw>
 <kw name="Press Key" owner="SeleniumLibrary">
-<arg>name:q</arg>
+<arg>name=q</arg>
 <arg>\\13</arg>
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-27T12:32:30.708897" elapsed="3.999864"/>
+<status status="PASS" start="2024-12-27T16:21:54.565879" elapsed="0.581568"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-27T12:32:44.711368" level="INFO">Slept 10 seconds.</msg>
+<msg time="2024-12-27T16:22:05.186543" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-27T12:32:34.710494" elapsed="10.001197"/>
+<status status="PASS" start="2024-12-27T16:21:55.185265" elapsed="10.001700"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-27T16:22:05.191742" level="INFO">Executing JavaScript:
+window.open('https://www.hastagtreinamentos.com/curso-python', '_blank');
+Without any arguments.</msg>
+<arg>window.open('https://www.hastagtreinamentos.com/curso-python', '_blank');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-27T16:22:05.189794" elapsed="0.579526"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<msg time="2024-12-27T16:22:14.012994" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-27T16:22:14.013669" level="FAIL">No window matching handle, name, title or URL '2' found.</msg>
+<arg>2</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="FAIL" start="2024-12-27T16:22:05.880800" elapsed="8.390361">No window matching handle, name, title or URL '2' found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=firstname</arg>
+<arg>Adriana de Fatima</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-27T16:22:14.273332" elapsed="0.000217"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>adrianadefatimamartins30@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-27T16:22:14.276154" elapsed="0.000203"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=phone</arg>
+<arg>999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-27T16:22:14.278298" elapsed="0.000192"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-12-27T16:22:14.279500" elapsed="0.000180"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-27T12:32:44.712653" elapsed="3.484262"/>
+<status status="NOT RUN" start="2024-12-27T16:22:14.280684" elapsed="0.000184"/>
 </kw>
-<status status="PASS" start="2024-12-27T12:32:15.367179" elapsed="32.831394"/>
+<status status="FAIL" start="2024-12-27T16:21:39.842218" elapsed="34.439873">No window matching handle, name, title or URL '2' found.</status>
 </test>
-<status status="PASS" start="2024-12-27T12:32:13.183585" elapsed="35.017463"/>
+<status status="FAIL" start="2024-12-27T16:21:37.324773" elapsed="36.966463"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Teste">Teste</stat>
 </suite>
 </statistics>
 <errors>
