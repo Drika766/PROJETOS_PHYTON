@@ -1,71 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-29T14:43:28.157692" rpa="false" schemaversion="5">
-<suite id="s1" name="testesBDD" source="C:\PROJETOS_PHYTON\testesBDD.robot">
-<test id="s1-t1" name="Pesquisa Sobre Inteligência Artificial" line="11">
-<kw name="Abrir Navegador e Acessar Google">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-29T15:08:49.263577" rpa="false" schemaversion="5">
+<suite id="s1" name="Testegoogle" source="C:\PROJETOS_PHYTON\testegoogle.robot">
+<test id="s1-t1" name="Acessar Google" line="9">
+<kw name="Quando eu abrir o navegador">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-29T14:43:30.830404" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<msg time="2024-12-29T15:08:51.696884" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-29T14:43:30.825919" elapsed="14.257101"/>
+<status status="PASS" start="2024-12-29T15:08:51.695903" elapsed="12.743503"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-29T14:43:45.083747" elapsed="0.380289"/>
+<status status="PASS" start="2024-12-29T15:09:04.440136" elapsed="0.306677"/>
 </kw>
-<doc>Abre o navegador e acessa o Google.</doc>
-<status status="PASS" start="2024-12-29T14:43:30.821772" elapsed="14.642699"/>
+<doc>Abre o navegador na URL definida.</doc>
+<status status="PASS" start="2024-12-29T15:08:51.692765" elapsed="13.054485"/>
 </kw>
-<kw name="Realizar Pesquisa">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T14:43:45.467926" level="INFO">Typing text 'inteligência artificial' into text field 'name:q'.</msg>
-<arg>name:q</arg>
-<arg>${SEARCH_TERM}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T14:43:45.466818" elapsed="0.661443"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-12-29T14:43:46.130030" level="INFO">Sending key(s) ('ENTER',) to name:q element.</msg>
-<msg time="2024-12-29T14:43:46.503266" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-12-29T14:43:46.503522" level="INFO">Releasing special key ENTER.</msg>
-<arg>name:q</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-12-29T14:43:46.128874" elapsed="5.316126"/>
-</kw>
-<doc>Realiza a pesquisa sobre inteligência artificial.</doc>
-<status status="PASS" start="2024-12-29T14:43:45.465846" elapsed="5.979776"/>
-</kw>
-<kw name="Esperar Resultado e Fechar">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-29T14:44:01.465603" level="INFO">Slept 10 seconds.</msg>
-<arg>${WAIT_TIME}</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-29T14:43:51.457792" elapsed="10.008264"/>
+<kw name="Então eu devo acessar a página do Google">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-29T15:09:04.794079" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-12-29T15:09:04.749378" elapsed="0.045000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-29T14:44:01.466805" elapsed="3.995297"/>
+<status status="PASS" start="2024-12-29T15:09:04.794911" elapsed="4.728559"/>
 </kw>
-<doc>Espera 10 segundos e fecha o navegador.</doc>
-<status status="PASS" start="2024-12-29T14:43:51.450983" elapsed="14.011681"/>
+<doc>Verifica se a página do Google foi carregada com sucesso.</doc>
+<status status="PASS" start="2024-12-29T15:09:04.748351" elapsed="4.775691"/>
 </kw>
-<doc>Como um usuário, quero pesquisar sobre inteligência artificial no Google.</doc>
-<tag>pesquisa google</tag>
-<status status="PASS" start="2024-12-29T14:43:30.815482" elapsed="34.648484"/>
+<kw name="Dado que eu quero acessar o Google">
+<kw name="No Operation" owner="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" start="2024-12-29T15:09:09.526759" elapsed="0.000595"/>
+</kw>
+<doc>Define o contexto inicial do teste.</doc>
+<status status="PASS" start="2024-12-29T15:09:09.525495" elapsed="0.002305"/>
+</kw>
+<kw name="Quando eu abrir o navegador">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-29T15:09:09.531739" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-29T15:09:09.530710" elapsed="15.933134"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-29T15:09:25.464630" elapsed="0.428537"/>
+</kw>
+<doc>Abre o navegador na URL definida.</doc>
+<status status="PASS" start="2024-12-29T15:09:09.529182" elapsed="16.364516"/>
+</kw>
+<kw name="Então eu devo acessar a página do Google">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-29T15:09:25.960496" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-12-29T15:09:25.896555" elapsed="0.064490"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-29T15:09:25.962000" elapsed="3.693668"/>
+</kw>
+<doc>Verifica se a página do Google foi carregada com sucesso.</doc>
+<status status="PASS" start="2024-12-29T15:09:25.895215" elapsed="3.761001"/>
+</kw>
+<doc>Cenário: Dado que eu quero acessar o Google</doc>
+<tag>acesso google</tag>
+<status status="PASS" start="2024-12-29T15:08:51.588982" elapsed="38.068520"/>
 </test>
-<status status="PASS" start="2024-12-29T14:43:28.164386" elapsed="37.304008"/>
+<status status="PASS" start="2024-12-29T15:08:49.271319" elapsed="40.391693"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">pesquisa google</stat>
+<stat pass="1" fail="0" skip="0">acesso google</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="testesBDD">testesBDD</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testegoogle">Testegoogle</stat>
 </suite>
 </statistics>
 <errors>
